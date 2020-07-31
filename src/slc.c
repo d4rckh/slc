@@ -5,11 +5,7 @@
 #include "functions/findsize.h"
 #include "functions/concatfile.h"
 
-/*
-*/
-
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 	printf("(%s)\n", argv[0]);
 	
 	int concat = 0;
@@ -23,8 +19,7 @@ int main(int argc, char *argv[])
 	}
 
 	int i;
-    for(i=0; i<argc; ++i)
-    {  
+    for(i=0; i<argc; ++i) {  
 		if (strcmp(argv[i], "--cat") == 0) {
 			concat = 1;
 		}
@@ -34,8 +29,7 @@ int main(int argc, char *argv[])
 	int n;
 
 	n = scandir(path, &namelist, 0, alphasort);
-	if (n < 0)
-		perror("scandir");
+	if (n < 0) perror("scandir");
 	else {
     	while (n--) {
 			char *dname = namelist[n]->d_name; 

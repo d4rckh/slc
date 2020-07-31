@@ -6,7 +6,6 @@ long int findSize(char file_name[]) {
   
     if (fp == NULL) { 
         // TODO: show proper error
-		// printf("File Not Found!\n"); 
         return -1; 
     } 
     fseek(fp, 0L, SEEK_END); 

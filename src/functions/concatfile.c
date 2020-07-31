@@ -8,15 +8,10 @@ void concatfile(char *filename, char *path) {
 	
 	fPtr = fopen(strcat(strcat(path, "/"), filename), "r");
 
-	if(fPtr == NULL)
-    {
-        //printf("Unable to open file.\n");
-        //printf("Please check whether file exists and you have read privilege.\n");
+	if(fPtr == NULL) {
         //exit(EXIT_FAILURE);
     } else {
-		//printf("File opened successfully. Reading file contents character by character. \n\n");
-		do 
-		{
+		do {
 			ch = fgetc(fPtr);
 			putchar(ch);
 		} while(ch != EOF);

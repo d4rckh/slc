@@ -1,0 +1,1 @@
+void concatfile(char *filename, char *path);
